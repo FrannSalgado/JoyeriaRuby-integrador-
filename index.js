@@ -7,6 +7,8 @@ const selectorProduct = document.getElementById("product");
 const selectorMaterial = document.getElementById("material");
 const moreItems = document.getElementById("moreItems");
 const imageSlider = document.querySelectorAll(".image")
+const profileIcon = document.querySelectorAll(".toggle")
+const containerAcount = document.querySelector(".containerAcount")
 let dataRender = [];
 
 
@@ -99,8 +101,14 @@ const init = () => {
     imageSlider.forEach(i => {
         i.addEventListener("click", filtroSlider)
     })
+    profileIcon.forEach(i => {
+        i.addEventListener("click", (e) => {
+            e.preventDefault();
+            containerAcount.classList.toggle("displayNone");
+        })
+    })
+
     renderProducts(productos);
-
-
 }
+
 init();

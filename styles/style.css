@@ -73,6 +73,12 @@ header {
     width: 30px;
 }
 
+.burgerMenu {
+    display: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
 
 body {
     background-color: rgb(24, 24, 24);
@@ -92,7 +98,7 @@ body {
     justify-content: center;
 }
 
-.acount {
+.containAbsolute {
     position: relative;
     display: flex;
     justify-content: center;
@@ -129,6 +135,65 @@ body {
     bottom: 10px;
     cursor: pointer;
     color: red;
+}
+
+.login {
+    height: 80%;
+    width: 40%;
+    min-width: 450px;
+}
+
+.formLogin {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.formLogin input {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 35px;
+    width: 60%;
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+    background-color: rgb(71, 71, 71);
+}
+
+.formLogin button {
+    height: 35px;
+    width: 160px;
+    font-size: 18px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 20px;
+}
+
+.formLogin h4 {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.formLogin h4:hover {
+    text-decoration: underline;
+}
+
+.register {
+    height: 80%;
+    width: 40%;
+    min-width: 450px;
+}
+
+.registerForm {
+    width: 90%;
+    height: 90%;
+    gap: 10px;
+    text-align: left;
+
+
 }
 
 
@@ -222,20 +287,20 @@ body {
     top: -17px;
     background-size: 720px;
 
-    background-image: url("./assets/slider/plateria.png")
+    background-image: url("../assets/slider/plateria.png")
 }
 
 .slider2 {
-    background-image: url("./assets/slider/oro.png")
+    background-image: url("../assets/slider/oro.png")
 }
 
 .slider3 {
-    background-image: url("./assets/slider/oro-rosa.png")
+    background-image: url("../assets/slider/oro-rosa.png")
 }
 
 .slider4 {
     background-size: 800px;
-    background-image: url("./assets/slider/diamante.png")
+    background-image: url("../assets/slider/diamante.png")
 }
 
 /* <!-- Fin SliderIMG --> */
@@ -606,6 +671,13 @@ footer {
 
     }
 
+    .burgerMenu {
+        display: inline;
+    }
+
+    .linksNav {
+        display: none;
+    }
 
 }
 
@@ -647,9 +719,26 @@ footer {
     .redes {
         flex-direction: unset;
     }
+
 }
 
 @media screen and (max-width:396px) {
+
+    .logo {
+        width: 200px;
+        font-size: 25px;
+        padding-left: 5px;
+
+    }
+
+    .fa-bars {
+        font-size: 35px;
+    }
+
+    .logo img {
+        height: 50px;
+
+    }
 
     .galeriSlider {
 

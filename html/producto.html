@@ -6,37 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruby Joyeria</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
-        defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/producto.css">
     <script src="https://kit.fontawesome.com/e51a9eeccd.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
     <header>
-        <div class="logo flex">
-            <img src="./assets/icons/ruby.png" alt="">
-            <p>Ruby Joyeria</p>
-        </div>
+        <a href="../html/index.html#home">
+
+            <div class="logo flex">
+                <img src="../assets/icons/ruby.png" alt="">
+                <p>Ruby Joyeria</p>
+            </div>
+        </a>
         <nav class="flex navLinksContainer">
             <ul class="linksNav flex">
-                <a href="#home" class="iconNav flex">
-                    <img class="icon" src="./assets/icons/home.png" alt="">
+                <a href="index.html" class="iconNav flex">
+                    <img class="icon" src="../assets/icons/home.png" alt="">
                     <p>Home</p>
                 </a>
-                <a href="#productosSection" class="iconNav flex">
-                    <img class="icon" src="./assets/icons/productos.png" alt="">
+                <a href="index.html#productosSection" class="iconNav flex">
+                    <img class="icon" src="../assets/icons/productos.png" alt="">
                     <p>Productos</p>
                 </a>
                 <a href="" class="iconNav flex">
-                    <img class="icon" src="./assets/icons/carrito.png" alt="">
+                    <img class="icon" src="../assets/icons/carrito.png" alt="">
                     <p>Carrito</p>
                 </a>
+
                 <a href="" class="iconNav flex toggle">
-                    <img class="icon" src="./assets/icons/profile.png" alt="">
+                    <img class="icon" src="../assets/icons/profile.png" alt="">
                     <p>Perfil</p>
                 </a>
 
@@ -44,119 +44,94 @@
         </nav>
     </header>
     <div class="containerAcount displayNone">
-        <div class="acount">
+        <div class="containAbsolute choise ">
             <i class="fa-regular fa-circle-xmark fa-3x xMark toggle"></i>
             <h2>Inicia sesion para comprar tus productos!</h2>
             <div class="acountBtn">
-                <button>Iniciar Sesion</button>
-                <button>Crear Cuenta</button>
+                <button value="1" class="toggle">Iniciar Sesion</button>
+                <button value="2" class="toggle">Crear Cuenta</button>
             </div>
+        </div>
+        <div class="containAbsolute login displayNone ">
+            <i class="fa-solid fa-circle-user fa-6x"></i>
+            <i class="fa-regular fa-circle-xmark fa-3x xMark toggle"></i>
+            <form action="" class="formLogin">
+                <h3>Usuario</h3>
+                <input type="email" name="" id="">
+                <h3>Contraseña</h3>
+                <input type="password" name="" id="">
+                <button type="reset" class="toggle">Iniciar Sesion</button>
+                <h4 id="changeToRegister" value="2">No Tengo Cuenta</h4>
+            </form>
+        </div>
+        <div class="containAbsolute register displayNone ">
+            <i class="fa-regular fa-circle-xmark fa-3x xMark toggle"></i>
+            <form action="" class="formLogin registerForm">
+                <h3>Nombre</h3>
+                <input type="text" name="" id="nombre">
+                <h3>Apellido</h3>
+                <input type="text" name="" id="apellido">
+                <h3>Mail</h3>
+                <input type="email" name="" id="email">
+                <h3>Contraseña</h3>
+                <input type="password" name="" id="password">
+                <h3>Repita Contraseña</h3>
+                <input type="password" name="" id="passwordConfirm">
+                <button type="reset" class="toggle">Registrarme</button>
+                <h4 id="changeToLogin">Ya tengo Cuenta</h4>
+            </form>
+
         </div>
     </div>
 
-    <!-- SLIDER IMG -->
-    <div class="limits" id="home">
 
-        <a href="#productos" class="containerSlider">
-            <div class="galeriSlider">
-                <div class="image slider1 imagenchiqita" id="Plata">
-                    <h2 data-id="Plata">Plata 925</h2>
+    </ul>
+    </nav>
+    </header>
+    <div class="productsContainerRender">
+        <div class="imagenProduct">
+            <img src="../assets/products/OR/A-02.png" alt="">
+        </div>
+        <div class="info">
+            <div class="dataRender">
+                <h1>Nombre </h1>
+                <h2>descripcion</h2>
+                <p>Precio</p>
+            </div>
+
+
+            <div class="line"></div>
+            <div class="garantias">
+                <div>
+                    <i class="fa-solid fa-file-shield fa-2x"></i>
+                    <p>Garantia 12 Meses</p>
                 </div>
-                <div class="image slider2 imagenchiqita" id="Oro">
-                    <h2 data-id="Oro">Oro 24k</h2>
+
+                <div>
+                    <i class="fa-solid fa-truck-fast fa-2x "></i>
+                    <p>Envio Gratis</p>
                 </div>
-                <div class="image slider3 imagenchiqita" id="OR">
-                    <h2 data-id="Oro Rosa">Oro Rosa</h2>
+                <div>
+                    <i class="fa-solid fa-thumbs-up fa-2x"></i>
+                    <p>Stock Disponible</p>
                 </div>
-                <div class="image slider4 imagenchiqita" id="Diamante">
-                    <h2 data-id="Diamante">Diamantes</h2>
+                <div class="buttonsProducts">
+                    <button>Añadir</button>
+                    <button>Comprar</button>
                 </div>
 
+
             </div>
-
-        </a>
-
-    </div>
-    <!-- Fin SliderIMG -->
-    <!-- garantias -->
-    <div class="containerBenefit">
-        <div class="benefitCard">
-            <i class="fa-solid fa-shield-halved fa-5x"></i>
-            <div class="benefitInfo">
-                <h2>Compra Protegida</h2>
-            </div>
-
-        </div>
-        <div class="benefitCard">
-            <i class="fa-solid fa-truck-fast fa-5x "></i>
-            <div class="benefitInfo">
-                <h2>Envio Gratis</h2>
-            </div>
-
-        </div>
-        <div class="benefitCard">
-            <i class="fa-solid fa-file-shield fa-5x"></i>
-            <div class="benefitInfo">
-                <h2>Garantia</h2>
-            </div>
-
-        </div>
-        <div class="benefitCard">
-            <i class="fa-solid fa-award fa-5x"></i>
-            <div class="benefitInfo">
-                <h2>Certificacion de Autenticidad</h2>
-            </div>
-        </div>
-
-    </div>
-    <!-- garantias end -->
-    <div class="divisor" id="productosSection">
-        <div class="line"></div>
-        <div class="line lineSmall"></div>
-    </div>
-    <div class="productsContainer" id="productos">
-        <h2>Nuestros Productos</h2>
-        <div class="filters">
-            <div>
-
-                <h4>Tipo</h4>
-                <select class="selectFilter" name="Seleciona" id="product">
-                    <option value="">Todos</option>
-                    <option value="Anillo">Anillo</option>
-                    <option value="Pulsera">Pulsera</option>
-                    <option value="Dije">Dije</option>
-                    <option value="Collar">Collar</option>
-                    <option value="Lingote">Lingote</option>
-                </select>
-            </div>
-
-            <div>
-                <h4>Metal</h4>
-                <select class="selectFilter" name="metal" id="material">
-                    <option value=""> Todos </option>
-                    <option value="Oro">Oro</option>
-                    <option value="Plata">Plata</option>
-                    <option value="Oro Rosa">Oro Rosa</option>
-                    <option value="Diamante">Diamante</option>
-                </select>
-            </div>
-
-        </div>
-        <div class="renderProducts">
-
 
 
         </div>
 
-    </div>
-    <div class="moreItemsContainer">
-        <button id="moreItems" class="">Ver Mas</button>
     </div>
     <footer>
         <div class="benefitExtras">
             <div class="benefitExtraCard">
                 <div class="beExCardImg">
-                    <img src="assets/icons/tarjeta.png" alt="">
+                    <img src="../assets/icons/tarjeta.png" alt="">
                 </div>
                 <div class="beExCardInfo">
                     <div class="beExCardTitle">
@@ -169,7 +144,7 @@
             </div>
             <div class="benefitExtraCard">
                 <div class="beExCardImg">
-                    <img src="assets/icons/regalo.png" alt="">
+                    <img src="../assets/icons/regalo.png" alt="">
                 </div>
                 <div class="beExCardInfo">
                     <div class="beExCardTitle">
@@ -182,7 +157,7 @@
             </div>
             <div class="benefitExtraCard">
                 <div class="beExCardImg">
-                    <img src="assets/icons/ubicacion.png" alt="">
+                    <img src="../assets/icons/ubicacion.png" alt="">
                 </div>
                 <div class="beExCardInfo">
                     <div class="beExCardTitle">
@@ -196,7 +171,7 @@
             </div>
             <div class="benefitExtraCard">
                 <div class="beExCardImg">
-                    <img src="assets/icons/devoluciones.png" alt="">
+                    <img src="../assets/icons/devoluciones.png" alt="">
                 </div>
                 <div class="beExCardInfo">
                     <div class="beExCardTitle">
@@ -259,7 +234,7 @@
             </div>
             <div class="mediosDePago">
                 <p>Medios de Pago</p>
-                <img src="assets/icons/tarjetas.png" alt="">
+                <img src="../assets/icons/tarjetas.png" alt="">
             </div>
             <div class="github">
                 <i class="fa-brands fa-github"><a href="https://github.com/FrannSalgado"> GitHub</a></i>
@@ -267,9 +242,10 @@
         </div>
 
     </footer>
+    <script src="../js/producto.js" type="module"></script>
+    <script src="../js/acount.js"></script>
 
-
-    <script src="./index.js" type="module"></script>
 </body>
+
 
 </html>

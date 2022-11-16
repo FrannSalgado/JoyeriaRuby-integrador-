@@ -1,14 +1,11 @@
-import { Productos } from "./data.js";
+import { Productos } from "../js/data.js";
 const productos = Productos;
-console.log(productos);
 
 const renderContainer = document.querySelector(".renderProducts");
 const selectorProduct = document.getElementById("product");
 const selectorMaterial = document.getElementById("material");
 const moreItems = document.getElementById("moreItems");
-const imageSlider = document.querySelectorAll(".image")
-const profileIcon = document.querySelectorAll(".toggle")
-const containerAcount = document.querySelector(".containerAcount")
+const imageSlider = document.querySelectorAll(".image");
 let dataRender = [];
 
 
@@ -20,16 +17,22 @@ const renderProducts = (array) => {
     renderContainer.innerHTML = ``;
     const arraySliced = array.slice(dataRender.length, dataRender.length + 12)
     dataRender = dataRender.concat(arraySliced);
-    console.log(dataRender.length)
 
     if (dataRender.length === array.length) { moreItems.classList.add("displayNone") }
     else {
         moreItems.classList.remove("displayNone")
     }
 
+    if (dataRender.length === 0) {
+        renderContainer.innerHTML += `
+            <i class="fa-regular fa-face-sad-tear fa-4x"></i>
+            <h3>Producto No encontrado.</h3>
+            `
 
+    }
 
     dataRender.map(iterador => {
+
         const card =
             ` 
         <div>
@@ -100,12 +103,6 @@ const init = () => {
     moreItems.addEventListener("click", moreProducts)
     imageSlider.forEach(i => {
         i.addEventListener("click", filtroSlider)
-    })
-    profileIcon.forEach(i => {
-        i.addEventListener("click", (e) => {
-            e.preventDefault();
-            containerAcount.classList.toggle("displayNone");
-        })
     })
 
     renderProducts(productos);

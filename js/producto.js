@@ -1,4 +1,4 @@
-import { Productos } from "./data.js";
+import { Productos } from "../js/data.js";
 const containerData = document.querySelector(".dataRender")
 const containerImgD = document.querySelector(".imagenProduct")
 const getIdByQueryParams = () => {

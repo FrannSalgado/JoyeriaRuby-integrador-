@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Joyeria</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e51a9eeccd.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="../html/index.html#home">
+
+            <div class="logo flex">
+                <img src="../assets/icons/ruby.png" alt="">
+                <p>Ruby Joyeria</p>
+            </div>
+        </a>
+        <nav class="flex navLinksContainer">
+            <ul class="linksNav flex">
+                <a href="index.html" class="iconNav flex">
+                    <img class="icon" src="../assets/icons/home.png" alt="">
+                    <p>Home</p>
+                </a>
+                <a href="index.html#productosSection" class="iconNav flex">
+                    <img class="icon" src="../assets/icons/productos.png" alt="">
+                    <p>Productos</p>
+                </a>
+                <a href="" class="iconNav flex">
+                    <img class="icon" src="../assets/icons/carrito.png" alt="">
+                    <p>Carrito</p>
+                </a>
+
+                <a href="" class="iconNav flex toggle">
+                    <img class="icon" src="../assets/icons/profile.png" alt="">
+                    <p>Perfil</p>
+                </a>
+
+            </ul>
+            <ul class="burgerMenu">
+                <i class="fa-solid fa-bars fa-3x"></i>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="containerAcount displayNone">
+        <div class="containAbsolute choise ">
+            <i class="fa-regular fa-circle-xmark fa-3x xMark toggle"></i>
+            <h2>Inicia sesion para comprar tus productos!</h2>
+            <div class="acountBtn">
+                <button value="1" class="toggle">Iniciar Sesion</button>
+                <button value="2" class="toggle">Crear Cuenta</button>
+            </div>
+        </div>
+        <div class="containAbsolute login displayNone ">
+            <i class="fa-solid fa-circle-user fa-6x"></i>
+            <i class="fa-regular fa-circle-xmark fa-3x xMark toggle"></i>
+            <form action="" class="formLogin">
+                <h3>Usuario</h3>
+                <input type="email" name="" id="">
+                <h3>Contraseña</h3>
+                <input type="password" name="" id="">
+                <button type="reset" class="toggle">Iniciar Sesion</button>
+                <h4 id="changeToRegister" value="2">No Tengo Cuenta</h4>
+            </form>
+        </div>
+        <div class="containAbsolute register displayNone ">
+            <i class="fa-regular fa-circle-xmark fa-3x xMark toggle"></i>
+            <form action="" class="formLogin registerForm">
+                <h3>Nombre</h3>
+                <input type="text" name="" id="nombre">
+                <h3>Apellido</h3>
+                <input type="text" name="" id="apellido">
+                <h3>Mail</h3>
+                <input type="email" name="" id="email">
+                <h3>Contraseña</h3>
+                <input type="password" name="" id="password">
+                <h3>Repita Contraseña</h3>
+                <input type="password" name="" id="passwordConfirm">
+                <button type="reset" class="toggle">Registrarme</button>
+                <h4 id="changeToLogin">Ya tengo Cuenta</h4>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- SLIDER IMG -->
+    <div class="limits" id="home">
+
+        <a href="#productos" class="containerSlider">
+            <div class="galeriSlider">
+                <div class="image slider1 imagenchiqita" id="Plata">
+                    <h2 data-id="Plata">Plata 925</h2>
+                </div>
+                <div class="image slider2 imagenchiqita" id="Oro">
+                    <h2 data-id="Oro">Oro 24k</h2>
+                </div>
+                <div class="image slider3 imagenchiqita" id="OR">
+                    <h2 data-id="Oro Rosa">Oro Rosa</h2>
+                </div>
+                <div class="image slider4 imagenchiqita" id="Diamante">
+                    <h2 data-id="Diamante">Diamantes</h2>
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+    <!-- Fin SliderIMG -->
+    <!-- garantias -->
+    <div class="containerBenefit">
+        <div class="benefitCard">
+            <i class="fa-solid fa-shield-halved fa-5x"></i>
+            <div class="benefitInfo">
+                <h2>Compra Protegida</h2>
+            </div>
+
+        </div>
+        <div class="benefitCard">
+            <i class="fa-solid fa-truck-fast fa-5x "></i>
+            <div class="benefitInfo">
+                <h2>Envio Gratis</h2>
+            </div>
+
+        </div>
+        <div class="benefitCard">
+            <i class="fa-solid fa-file-shield fa-5x"></i>
+            <div class="benefitInfo">
+                <h2>Garantia</h2>
+            </div>
+
+        </div>
+        <div class="benefitCard">
+            <i class="fa-solid fa-award fa-5x"></i>
+            <div class="benefitInfo">
+                <h2>Certificacion de Autenticidad</h2>
+            </div>
+        </div>
+
+    </div>
+    <!-- garantias end -->
+    <div class="divisor" id="productosSection">
+        <div class="line"></div>
+        <div class="line lineSmall"></div>
+    </div>
+    <div class="productsContainer" id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="filters">
+            <div>
+
+                <h4>Tipo</h4>
+                <select class="selectFilter" name="Seleciona" id="product">
+                    <option value="">Todos</option>
+                    <option value="Anillo">Anillo</option>
+                    <option value="Pulsera">Pulsera</option>
+                    <option value="Dije">Dije</option>
+                    <option value="Collar">Collar</option>
+                    <option value="Lingote">Lingote</option>
+                </select>
+            </div>
+
+            <div>
+                <h4>Metal</h4>
+                <select class="selectFilter" name="metal" id="material">
+                    <option value=""> Todos </option>
+                    <option value="Oro">Oro</option>
+                    <option value="Plata">Plata</option>
+                    <option value="Oro Rosa">Oro Rosa</option>
+                    <option value="Diamante">Diamante</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="renderProducts">
+
+
+
+        </div>
+
+    </div>
+    <div class="moreItemsContainer">
+        <button id="moreItems" class="">Ver Mas</button>
+    </div>
+    <footer>
+        <div class="benefitExtras">
+            <div class="benefitExtraCard">
+                <div class="beExCardImg">
+                    <img src="../assets/icons/tarjeta.png" alt="">
+                </div>
+                <div class="beExCardInfo">
+                    <div class="beExCardTitle">
+                        <h2>Cuotas</h2>
+                    </div>
+                    <div class="beExCardText">
+                        <p>3, 6 cuotas sin interes en productos selecionados</p>
+                    </div>
+                </div>
+            </div>
+            <div class="benefitExtraCard">
+                <div class="beExCardImg">
+                    <img src="../assets/icons/regalo.png" alt="">
+                </div>
+                <div class="beExCardInfo">
+                    <div class="beExCardTitle">
+                        <h2>Regalos</h2>
+                    </div>
+                    <div class="beExCardText">
+                        <p>Elegí nuestras joyas para regalar en cada momento especial.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="benefitExtraCard">
+                <div class="beExCardImg">
+                    <img src="../assets/icons/ubicacion.png" alt="">
+                </div>
+                <div class="beExCardInfo">
+                    <div class="beExCardTitle">
+                        <h2>Encontranos</h2>
+                    </div>
+                    <div class="beExCardText">
+                        <a href="https://goo.gl/maps/b71SNjCyXVBZkYvR6">Encontranos en el Alto Palermo Shoping</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="benefitExtraCard">
+                <div class="beExCardImg">
+                    <img src="../assets/icons/devoluciones.png" alt="">
+                </div>
+                <div class="beExCardInfo">
+                    <div class="beExCardTitle">
+                        <h2>Devoluciones</h2>
+                    </div>
+                    <div class="beExCardText">
+                        <p>Retornos garantizados
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contactsContainer">
+            <div class="redes">
+                <i class="fa-brands fa-twitter fa-2x"></i>
+                <i class="fa-brands fa-facebook fa-2x"></i>
+                <i class="fa-brands fa-instagram fa-2x"></i>
+                <i class="fa-brands fa-pinterest fa-2x"></i>
+
+            </div>
+            <div class="contact">
+                <h2>Ayuda</h2>
+                <a href="">Tiendas</a>
+                <a href="">Garantia</a>
+                <a href="">Devoluciones</a>
+                <a href="">Uso y Cuidado del Producto</a>
+                <a href="">Informacion del Producto</a>
+            </div>
+            <div class="contact">
+                <h2>Nosotros</h2>
+                <a href="">Sobre Ruby Joyeria</a>
+                <a href="">Historia</a>
+                <a href="">Distribuidores</a>
+                <a href="">Politicas de Privacidad</a>
+                <a href="">Terminos y Condiciones</a>
+                <a href="">Politicas de Envio</a>
+
+            </div>
+            <div class="contact">
+                <h2>Atencion Al Cliente</h2>
+                <p>Whatsapp <br>
+
+                    Lunes a Viernes 8 a 00hs <br>
+                    Sábado y Domingo 9 a 00hs <br>
+                    Feriados 9 a 18hs
+                </p>
+
+                <p>Correo electrónico <br>
+                    contacto@rubyJoyeria.com.ar</p>
+            </div>
+
+
+        </div>
+        <div class="ContainFoot">
+            <div class="copyRight">
+                <p>© Ruby Joyeria 2021-2022</p>
+
+            </div>
+            <div class="mediosDePago">
+                <p>Medios de Pago</p>
+                <img src="../assets/icons/tarjetas.png" alt="">
+            </div>
+            <div class="github">
+                <i class="fa-brands fa-github"><a href="https://github.com/FrannSalgado"> GitHub</a></i>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="../js/index.js" type="module"></script>
+    <script src="../js/acount.js"></script>
+</body>
+
+</html>

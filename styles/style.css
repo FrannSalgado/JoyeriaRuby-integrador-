@@ -84,6 +84,10 @@ body {
     background-color: rgb(24, 24, 24);
 }
 
+.size {
+    font-size: 5em;
+}
+
 /*---login -- */
 .containerAcount {
     width: 100%;
@@ -747,11 +751,42 @@ footer {
 
 }
 
+@media screen and (max-width:631px) {
+    .cardProduct {
+        flex-direction: initial;
+        height: 250px;
+        width: 90vw;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cardImg {
+        width: 180px;
+        height: 232px;
+        overflow: hidden;
+
+    }
+
+    .cover {
+        height: 180px;
+        width: 162px;
+    }
+}
+
 @media screen and (max-width:516px) {
     .redes {
         flex-direction: unset;
     }
 
+    .cardInfo {
+        gap: 15px;
+    }
+
+    .cardProduct {
+        height: 200px;
+        overflow: hidden;
+
+    }
 }
 
 @media screen and (max-width:396px) {
@@ -762,6 +797,42 @@ footer {
         padding-left: 5px;
 
     }
+
+    .menuBurger {
+
+        width: 100%;
+    }
+
+    .containerBenefit {
+        gap: 12px;
+    }
+
+    .benefitCard {
+        width: 90%;
+        height: 70px;
+        flex-direction: initial;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .size {
+        font-size: 50px;
+    }
+
+    .benefitInfo {
+        text-align: left;
+        width: 60%;
+        font-size: 10px;
+
+
+    }
+
+    .cardImg {
+        width: 147px;
+        height: 166px;
+    }
+
+
 
     .fa-bars {
         font-size: 35px;
@@ -798,14 +869,8 @@ footer {
         overflow-y: unset;
     }
 
-    .cardProduct {
-        width: 271px;
-        height: 359px;
-    }
 
-    .cover {
-        width: 250px;
 
-    }
+
 
 }

@@ -6,8 +6,7 @@ const selectorProduct = document.getElementById("product");
 const selectorMaterial = document.getElementById("material");
 const moreItems = document.getElementById("moreItems");
 const imageSlider = document.querySelectorAll(".image");
-const toggleMenu = document.querySelectorAll(".toggleMenu");
-const burgerMenu = document.querySelector(".containerBurgerMenu");
+
 let dataRender = [];
 
 
@@ -45,7 +44,7 @@ const renderProducts = (array) => {
                     </div>
                     <div class="cardInfo">
                         <div class="cardLink">
-                            <a href="producto.html?id=${iterador.id}">${iterador.nombre}</a>
+                            <a href="html/producto.html?id=${iterador.id}">${iterador.nombre}</a>
                         </div>
                         <div class="cardPrice">
                             <p>Precio: $${iterador.precio}</p>
@@ -106,11 +105,7 @@ const init = () => {
     imageSlider.forEach(i => {
         i.addEventListener("click", filtroSlider)
     })
-    toggleMenu.forEach(i => {
-        i.addEventListener("click", (e) => {
-            burgerMenu.classList.toggle("displayNone")
-        })
-    })
+
 
 
     renderProducts(productos);

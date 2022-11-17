@@ -5,6 +5,8 @@ const register = document.querySelector(".register")
 const choise = document.querySelector(".choise")
 const changeToRegister = document.getElementById("changeToRegister")
 const changeToLogin = document.getElementById("changeToLogin")
+const toggleMenu = document.querySelectorAll(".toggleMenu");
+const burgerMenu = document.querySelector(".containerBurgerMenu");
 
 
 
@@ -42,6 +44,11 @@ const init = () => {
     })
     changeToLogin.addEventListener("click", (e) => {
         valueDo("2")
+    })
+    toggleMenu.forEach(i => {
+        i.addEventListener("click", (e) => {
+            burgerMenu.classList.toggle("displayNone")
+        })
     })
 
 

@@ -12,7 +12,7 @@ const productData = Productos;
 const rendeProduct = () => {
     productData.filter(iterador => {
         if (iterador.id === getIdByQueryParams()) {
-            containerImgD.innerHTML = `<img src=${iterador.img} alt="">`
+            containerImgD.innerHTML = `<img src=../${iterador.img} alt="">`
             containerData.innerHTML =
                 `
                 <h1>${iterador.nombre} </h1>
@@ -24,4 +24,5 @@ const rendeProduct = () => {
     })
 
 }
+
 rendeProduct();

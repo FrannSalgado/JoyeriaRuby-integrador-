@@ -38,7 +38,7 @@ const renderProducts = (array) => {
         const card =
             ` 
         <div>
-            <a href="producto.html?id=${iterador.id}">
+            <a href="html/producto.html?id=${iterador.id}">
                 <div class="cardProduct" id="${iterador.id}">
                     <div class="cardImg">
                         <img class="cover" src=${iterador.img} alt="">

@@ -1,6 +1,7 @@
 import { Productos } from "../js/data.js";
 const containerData = document.querySelector(".dataRender")
 const containerImgD = document.querySelector(".imagenProduct")
+const buttonProducts = document.querySelector(".buttonsProducts")
 const getIdByQueryParams = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get("id"));
@@ -19,7 +20,9 @@ const rendeProduct = () => {
                 <h2>${iterador.descripcion}</h2>
                 <p>$${iterador.precio}</p>
             `
-
+            buttonProducts.innerHTML = `
+            <button class="addCart" id="${iterador.id}">Añadir</button>
+                    <button>Comprar</button>`
         }
     })
 

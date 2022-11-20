@@ -1,5 +1,5 @@
 import { Productos } from "../js/data.js";
-const productos = Productos;
+export const productos = Productos;
 
 const renderContainer = document.querySelector(".renderProducts");
 const selectorProduct = document.getElementById("product");
@@ -7,7 +7,7 @@ const selectorMaterial = document.getElementById("material");
 const moreItems = document.getElementById("moreItems");
 const imageSlider = document.querySelectorAll(".image");
 
-let dataRender = [];
+export let dataRender = [];
 
 
 function shuffle(array) {
@@ -38,7 +38,7 @@ const renderProducts = (array) => {
             ` 
         <div>
             <a href="html/producto.html?id=${iterador.id}">
-                <div class="cardProduct" id="${iterador.id}">
+                <div class="cardProduct" ">
                     <div class="cardImg">
                         <img class="cover" src=${iterador.img} alt="">
                     </div>
@@ -50,7 +50,7 @@ const renderProducts = (array) => {
                             <p>Precio: $${iterador.precio}</p>
                         </div>
                         <div class="cardBtn">
-                            <button>+ Carrito</button>
+                            <button class="addCart" id="${iterador.id}">+ Carrito</button>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ const init = () => {
     imageSlider.forEach(i => {
         i.addEventListener("click", filtroSlider)
     })
-
+    // addCartFunction()
 
 
     renderProducts(productos);

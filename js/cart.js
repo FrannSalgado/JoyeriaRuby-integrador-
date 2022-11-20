@@ -80,12 +80,24 @@ const deleteItem = () => {
     const crossItem = document.querySelectorAll(".cross")
     crossItem.forEach(i => {
         i.addEventListener("click", e => {
-            const carritoFiltrado = carrito.filter(iterador => {
+            let check = false;
+            const carritoFiltrado = [];
+            carrito.map(iterador => {
                 if (iterador.id !== parseInt(i.id)) {
 
-                    return iterador;
+                    console.log(carritoFiltrado)
+                    carritoFiltrado.push(iterador);
+                    console.log(carritoFiltrado)
+                    return
 
 
+                }
+                if (iterador.id === parseInt(i.id) && check === false) {
+                    check = true
+                    return
+                }
+                else {
+                    carritoFiltrado.push(iterador)
                 }
             })
             carrito = carritoFiltrado;

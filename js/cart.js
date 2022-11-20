@@ -84,13 +84,8 @@ const deleteItem = () => {
             const carritoFiltrado = [];
             carrito.map(iterador => {
                 if (iterador.id !== parseInt(i.id)) {
-
-                    console.log(carritoFiltrado)
                     carritoFiltrado.push(iterador);
-                    console.log(carritoFiltrado)
                     return
-
-
                 }
                 if (iterador.id === parseInt(i.id) && check === false) {
                     check = true

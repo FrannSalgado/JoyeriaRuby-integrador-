@@ -1,11 +1,14 @@
 import { Productos } from "./data.js";
-const addCart = document.querySelectorAll(".addCart");
+export let addCart = document.querySelectorAll(".addCart");
 const DataCart = document.querySelector(".dataRender");
 const cardsContainer = document.querySelector(".cards");
 // const crossItem = document.querySelectorAll(".cross")
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
+export const RefreshButtons = () => {
+    addCart = document.querySelectorAll(".addCart");
+}
 const setLocalStorage = (array) => {
     localStorage.setItem("carrito", JSON.stringify(array));
 }
@@ -43,7 +46,7 @@ const renderCart = () => {
                             <img src=../${iterador.img} alt="" class="cardImg">
                         </div>
                         <div class="InfoProductCart ">
-                            <h2>${iterador.nombre}</h2>
+                            <a href="../html/producto.html?id=${iterador.id}"><h2>${iterador.nombre}</h2></a>
                             <h4>Precio : ${iterador.precio}</h4>
                         </div>
                             <div class="delete">
@@ -105,8 +108,7 @@ const deleteItem = () => {
     })
 }
 
-
-const addCartFunction = () => {
+export const addCartFunction = () => {
 
     addCart.forEach(i => {
         i.addEventListener("click", e => {
@@ -123,6 +125,7 @@ const addCartFunction = () => {
 }
 
 const init = () => {
+    // RefreshButtons();
     addCartFunction()
     renderCart();
     deleteItem();
